@@ -4,13 +4,12 @@ import Link from "next/link";
 const LandingPage = () => {
   return (
     <div>
-      Landing Page 모두가 접근 가능
       <div>
         <Link href="/sign-in">
-          <Button>로그인</Button>
+          <Button>Login</Button>
         </Link>
         <Link href="/sign-up">
-          <Button>회원가입</Button>
+          <Button>Signup</Button>
         </Link>
       </div>
     </div>
