@@ -27,7 +27,7 @@ const routes = [
   {
     label: "Let's Chat",
     icon: MessageCircleMoreIcon,
-    href: "/conversation",
+    href: "/chat",
     color: "text-green-500",
   },
   {

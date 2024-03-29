@@ -18,7 +18,7 @@ const tools = [
     icon: MessageCircleMoreIcon,
     color: "text-green-500",
     bgColor: "bg-green-500/10",
-    href: "/conversation",
+    href: "/chat",
   },
   {
     label: "Write the code",
