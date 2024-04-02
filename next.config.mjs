@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: ["oaidalleapiprodscus.blob.core.windows.net"],
+  },
+};
 
 export default nextConfig;
+
+// oaidalleapiprodscus.blob.core.windows.net
