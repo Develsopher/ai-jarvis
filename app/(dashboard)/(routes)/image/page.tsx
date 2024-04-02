@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/navigation";
 import * as z from "zod";
 import axios from "axios";
@@ -9,16 +8,12 @@ import { Download, Palette } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { amountOptions, formSchema, resolutionOptions } from "./constants";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 import { Heading } from "@/components/heading";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Empty } from "@/components/empty";
 import { Loader } from "@/components/Loader";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { cn } from "@/lib/utils";
-import { UserAvatar } from "@/components/user-avatar";
-import { BotAvatar } from "@/components/bot-avatar";
 import {
   Select,
   SelectContent,
@@ -38,7 +33,7 @@ const CodePage = () => {
     defaultValues: {
       prompt: "",
       amount: "1",
-      resolution: "512x512",
+      resolution: "1024x1024",
     },
   });
 
@@ -159,7 +154,7 @@ const CodePage = () => {
         </div>
         <div className="space-y-4 mt-4">
           {isLoading && (
-            <div className="p-20">
+            <div className="p-8 rounded-lg w-full flex items-center justify-center bg-primary">
               <Loader />
             </div>
           )}

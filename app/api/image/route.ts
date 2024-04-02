@@ -31,11 +31,12 @@ export async function POST(req: Request) {
     }
 
     const response = await openai.images.generate({
+      model: "dall-e-3",
       prompt,
-      n: 1,
+      n: parseInt(amount, 10),
       size: resolution,
     });
-    console.log("hello", response);
+
     return NextResponse.json(response.data);
   } catch (error) {
     console.log("[CONVERSATION_ERROR]", error);
