@@ -1,7 +1,8 @@
 import { authMiddleware } from "@clerk/nextjs";
 
 export default authMiddleware({
-  publicRoutes: ["/"],
+  //  Check : webhook 401 error handling
+  publicRoutes: ["/", "/api/webhook"],
 });
 
 export const config = {
