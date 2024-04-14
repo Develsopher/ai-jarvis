@@ -5,8 +5,7 @@ import { Crisp } from "crisp-sdk-web";
 
 export const CrispChat = () => {
   useEffect(() => {
-    Crisp.configure(process.env.NEXT_PUBLIC_CRISP_WEBSITE_ID as string);
-    Crisp.setHideOnMobile(true);
+    Crisp.configure("6d771a43-2447-4a75-9d7d-59cf35d88705");
   }, []);
 
   return null;
