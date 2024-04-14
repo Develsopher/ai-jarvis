@@ -1,8 +1,11 @@
-const LandingLayout = ({ children }: { children: React.ReactNode }) => {
+import Topbar from "@/components/landing/topbar";
+
+const LandingLayout = (props: { children: React.ReactNode }) => {
   return (
-    <main className="h-full bg-[#111827] overflow-auto">
-      <div className="mx-auto max-w-screen-xl size-full">{children}</div>
-    </main>
+    <div className="h-screen">
+      <Topbar />
+      <main className="max-w-5xl mx-auto">{props.children}</main>
+    </div>
   );
 };
 

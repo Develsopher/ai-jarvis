@@ -37,7 +37,7 @@ export const TOOLS = [
     title: "Create videos",
     icon: FileVideoIcon,
     url: "/video",
-    color: "text-pink-400",
+    color: "text-pink-500",
     bgColor: "bg-pink-400/10",
     slug: "video",
   },
