@@ -3,8 +3,7 @@ import { Exo_2 } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "react-hot-toast";
-import { CrispChat } from "@/components/crisp-chat";
-import { ModalProvider } from "@/components/dashboard/modal-provider";
+import { CrispProvider } from "@/components/crisp-provider";
 
 const exo2 = Exo_2({ subsets: ["latin"] });
 
@@ -21,7 +20,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <CrispChat />
+        <CrispProvider />
         <body className={exo2.className}>
           <Toaster />
           {children}

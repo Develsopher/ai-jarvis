@@ -1,5 +1,4 @@
 import { ModalProvider } from "@/components/dashboard/modal-provider";
-import { ProModal } from "@/components/dashboard/pro-modal";
 import Sidebar from "@/components/sidebar";
 import MobileSidebar from "@/components/sidebar/mobile-sidebar";
 import Topbar from "@/components/dashboard/topbar";
