@@ -18,7 +18,7 @@ import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
 import { UserAvatar } from "@/components/user-avatar";
 import { BotAvatar } from "@/components/bot-avatar";
-import { useProModal } from "@/hooks/use-pro-modal";
+import { useProModal } from "@/stores/pro-modal";
 import toast from "react-hot-toast";
 
 const ChatPage = () => {

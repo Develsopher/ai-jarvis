@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Empty } from "@/components/empty";
 import { Loader } from "@/components/Loader";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { useProModal } from "@/hooks/use-pro-modal";
+import { useProModal } from "@/stores/pro-modal";
 import toast from "react-hot-toast";
 
 const MusicPage = () => {

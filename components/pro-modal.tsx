@@ -17,7 +17,7 @@ import {
   Check,
   Zap,
 } from "lucide-react";
-import { useProModal } from "@/hooks/use-pro-modal";
+import { useProModal } from "@/stores/pro-modal";
 import { Badge } from "./ui/badge";
 import { Card } from "./ui/card";
 import { cn } from "@/lib/utils";

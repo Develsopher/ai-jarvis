@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/select";
 import { Card, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
-import { useProModal } from "@/hooks/use-pro-modal";
+import { useProModal } from "@/stores/pro-modal";
 import toast from "react-hot-toast";
 
 const CodePage = () => {

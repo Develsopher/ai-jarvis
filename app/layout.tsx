@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Exo_2 } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "react-hot-toast";
+import { CrispChat } from "@/components/crisp-chat";
 import { ModalProvider } from "@/components/modal-provider";
-import { ToasterProvider } from "@/components/toaster-provider";
-import { CrispProvider } from "@/components/crisp-provider";
 
 const exo2 = Exo_2({ subsets: ["latin"] });
 
@@ -21,10 +21,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <CrispProvider />
+        <CrispChat />
         <body className={exo2.className}>
-          <ModalProvider />
-          <ToasterProvider />
+          <Toaster />
           {children}
         </body>
       </html>
