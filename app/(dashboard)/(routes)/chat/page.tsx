@@ -9,15 +9,15 @@ import { useForm } from "react-hook-form";
 import { formSchema } from "./constants";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
-import { Heading } from "@/components/heading";
+import { Heading } from "@/components/dashboard/heading";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Empty } from "@/components/empty";
-import { Loader } from "@/components/Loader";
+import { Empty } from "@/components/dashboard/empty";
+import { Loader } from "@/components/loader";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
-import { UserAvatar } from "@/components/user-avatar";
-import { BotAvatar } from "@/components/bot-avatar";
+import { UserAvatar } from "@/components/dashboard/user-avatar";
+import { BotAvatar } from "@/components/dashboard/bot-avatar";
 import { useProModal } from "@/stores/pro-modal";
 import toast from "react-hot-toast";
 
@@ -47,8 +47,6 @@ const ChatPage = () => {
         messages: newMessages,
       });
 
-      console.log("응답!!", response);
-
       setMessages((current) => [...current, userMessage, response.data]);
 
       form.reset();
@@ -62,8 +60,6 @@ const ChatPage = () => {
       router.refresh();
     }
   };
-
-  console.log("message!", messages);
 
   return (
     <div>
@@ -97,7 +93,7 @@ const ChatPage = () => {
                 )}
               />
               <Button
-                className="col-span-12 lg:col-span-2 w-full"
+                className="col-span-12 lg:col-span-2 w-full bg-gray-900"
                 disabled={isLoading}
               >
                 Generate
@@ -105,9 +101,9 @@ const ChatPage = () => {
             </form>
           </Form>
         </div>
-        <div className="space-y-4 mt-4">
+        <div className="space-y-4 mt-4 h-[calc(100vh-300px)] overflow-y-auto">
           {isLoading && (
-            <div className="p-8 rounded-lg w-full flex items-center justify-center bg-primary">
+            <div className="p-8 rounded-lg w-full flex items-center justify-center bg-gray-900">
               <Loader />
             </div>
           )}

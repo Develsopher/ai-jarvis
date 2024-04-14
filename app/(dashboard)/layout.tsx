@@ -1,8 +1,8 @@
-import { ModalProvider } from "@/components/modal-provider";
-import { ProModal } from "@/components/pro-modal";
+import { ModalProvider } from "@/components/dashboard/modal-provider";
+import { ProModal } from "@/components/dashboard/pro-modal";
 import Sidebar from "@/components/sidebar";
 import MobileSidebar from "@/components/sidebar/mobile-sidebar";
-import Topbar from "@/components/topbar";
+import Topbar from "@/components/dashboard/topbar";
 import { getApiLimitCount } from "@/lib/api-limit";
 import { checkSubscription } from "@/lib/subscription";
 import { cn } from "@/lib/utils";

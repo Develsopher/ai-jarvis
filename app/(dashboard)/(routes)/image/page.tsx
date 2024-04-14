@@ -8,11 +8,11 @@ import { Download, Palette } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { amountOptions, formSchema, resolutionOptions } from "./constants";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Heading } from "@/components/heading";
+import { Heading } from "@/components/dashboard/heading";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Empty } from "@/components/empty";
-import { Loader } from "@/components/Loader";
+import { Empty } from "@/components/dashboard/empty";
+import { Loader } from "@/components/loader";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import {
   Select,

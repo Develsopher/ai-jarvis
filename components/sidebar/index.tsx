@@ -9,7 +9,7 @@ import { Progress } from "@/components/ui/progress";
 import { MAX_FREE_COUNTS } from "@/constants";
 import SidebarToggle from "./sidebar-toggle";
 import Navbar from "./navbar";
-import { SubscriptionButton } from "@/components/subscription-button";
+import { SubscriptionButton } from "@/components/dashboard/subscription-button";
 
 interface SidebarProps {
   className?: string;
@@ -24,7 +24,6 @@ const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   const { isMinimal } = useSidebarStore();
   const { user } = useUser();
-
   return (
     <div className={cn("text-white", className)}>
       <div>

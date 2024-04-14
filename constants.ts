@@ -1,4 +1,3 @@
-import { ToolItemProps } from "@/components/tool-item";
 import {
   Bot,
   Code2Icon,

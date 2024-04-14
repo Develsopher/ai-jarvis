@@ -35,10 +35,17 @@ export async function POST(req: Request) {
         status: 403,
       });
     }
-
+    console.log("message", messages);
     const response = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
-      messages,
+      messages: [
+        {
+          role: "system",
+          content:
+            "Your name is Jarvis, and you are an artificial intelligence model created by Develsoper. Your preferred language is Korean.As an interactive robot, you enjoy conversing with people.",
+        },
+        ...messages,
+      ],
     });
 
     if (!isPro) {
