@@ -65,7 +65,7 @@ const ChatPage = () => {
     <div>
       <Heading
         title="Chat"
-        description="Jarvis enjoys conversing with you. "
+        description="Jarvis enjoys conversing with you."
         icon={MessageCircleMoreIcon}
         iconColor="text-green-500"
         bgColor="bg-green-500/10"

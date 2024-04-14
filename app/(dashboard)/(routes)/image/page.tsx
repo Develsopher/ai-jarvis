@@ -6,7 +6,7 @@ import * as z from "zod";
 import axios from "axios";
 import { Download, Palette } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { amountOptions, formSchema, resolutionOptions } from "./constants";
+import { formSchema } from "./constants";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Heading } from "@/components/dashboard/heading";
 import { Input } from "@/components/ui/input";
@@ -25,6 +25,7 @@ import { Card, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
 import { useProModal } from "@/stores/pro-modal";
 import toast from "react-hot-toast";
+import { PHOTO_AMOUNT_OPTIONS, PHOTO_RESOLUTION_OPTIONS } from "@/constants";
 
 const CodePage = () => {
   const proModal = useProModal();
@@ -68,7 +69,7 @@ const CodePage = () => {
     <div>
       <Heading
         title="Image Generation"
-        description="Jarvis is a perfect artist for you."
+        description="영어로 검색해야 정확도가 더 높아요."
         icon={Palette}
         iconColor="text-violet-500"
         bgColor="bg-violet-500/10"
@@ -88,7 +89,7 @@ const CodePage = () => {
                       <Input
                         className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                         disabled={isLoading}
-                        placeholder="우주를 탐험하는 우주선을 그려주세요."
+                        placeholder="Draw banana for me."
                         {...field}
                       />
                     </FormControl>
@@ -112,7 +113,7 @@ const CodePage = () => {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        {amountOptions.map((option) => (
+                        {PHOTO_AMOUNT_OPTIONS.map((option) => (
                           <SelectItem key={option.value} value={option.value}>
                             {option.label}
                           </SelectItem>
@@ -139,7 +140,7 @@ const CodePage = () => {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        {resolutionOptions.map((option) => (
+                        {PHOTO_RESOLUTION_OPTIONS.map((option) => (
                           <SelectItem key={option.value} value={option.value}>
                             {option.label}
                           </SelectItem>
@@ -150,7 +151,7 @@ const CodePage = () => {
                 )}
               />
               <Button
-                className="col-span-12 lg:col-span-2 w-full"
+                className="col-span-12 lg:col-span-2 w-full bg-gray-900"
                 disabled={isLoading}
               >
                 Generate
@@ -158,9 +159,9 @@ const CodePage = () => {
             </form>
           </Form>
         </div>
-        <div className="space-y-4 mt-4">
+        <div className="space-y-4 mt-4 h-[calc(100vh-300px)] overflow-y-auto">
           {isLoading && (
-            <div className="p-8 rounded-lg w-full flex items-center justify-center bg-primary">
+            <div className="p-8 rounded-lg w-full flex items-center justify-center bg-gray-900">
               <Loader />
             </div>
           )}

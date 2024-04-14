@@ -48,8 +48,6 @@ const CodePage = () => {
         messages: newMessages,
       });
 
-      console.log("응답!!", response);
-
       setMessages((current) => [...current, userMessage, response.data]);
 
       form.reset();
@@ -63,8 +61,6 @@ const CodePage = () => {
       router.refresh();
     }
   };
-
-  console.log("message!", messages);
 
   return (
     <div>
@@ -98,7 +94,7 @@ const CodePage = () => {
                 )}
               />
               <Button
-                className="col-span-12 lg:col-span-2 w-full"
+                className="col-span-12 lg:col-span-2 w-full bg-gray-900"
                 disabled={isLoading}
               >
                 Generate
@@ -106,9 +102,9 @@ const CodePage = () => {
             </form>
           </Form>
         </div>
-        <div className="space-y-4 mt-4">
+        <div className="space-y-4 mt-4 h-[calc(100vh-300px)] overflow-y-auto">
           {isLoading && (
-            <div className="p-8 rounded-lg w-full flex items-center justify-center bg-primary">
+            <div className="p-8 rounded-lg w-full flex items-center justify-center bg-gray-900">
               <Loader />
             </div>
           )}
@@ -130,7 +126,6 @@ const CodePage = () => {
                 )}
               >
                 {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
-                {/* <p className="text-sm">{String(message.content)}</p> */}
                 <ReactMarkdown
                   components={{
                     pre: ({ node, ...props }) => (

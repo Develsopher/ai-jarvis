@@ -13,7 +13,7 @@ const openai = new OpenAI({
 const instructionsMessage: ChatCompletionMessageParam = {
   role: "system",
   content:
-    "You ara a code generator. You must answer only in markdown code snippets. You always have to explain the code you created.",
+    "You ara a code generator. You must answer only in markdown code snippets. You always have to explain the code you created with Korean.",
 };
 
 export async function POST(req: Request) {

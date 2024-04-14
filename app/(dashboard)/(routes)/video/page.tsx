@@ -8,7 +8,6 @@ import { FileVideo, MessageCircleMoreIcon, Music2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { formSchema } from "./constants";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 import { Heading } from "@/components/dashboard/heading";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -56,7 +55,7 @@ const VideoPage = () => {
     <div>
       <Heading
         title="Video"
-        description="Jarvis, create the video!"
+        description="영어로 검색해야 정확도가 더 높아요."
         icon={FileVideo}
         iconColor="text-pink-500"
         bgColor="bg-pink-500/10"
@@ -76,7 +75,7 @@ const VideoPage = () => {
                       <Input
                         className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                         disabled={isLoading}
-                        placeholder="우주의 모습을 보여줘"
+                        placeholder="An astronaut riding a horse"
                         {...field}
                       />
                     </FormControl>
@@ -84,7 +83,7 @@ const VideoPage = () => {
                 )}
               />
               <Button
-                className="col-span-12 lg:col-span-2 w-full"
+                className="col-span-12 lg:col-span-2 w-full bg-gray-900"
                 disabled={isLoading}
               >
                 Generate
@@ -92,9 +91,9 @@ const VideoPage = () => {
             </form>
           </Form>
         </div>
-        <div className="space-y-4 mt-4">
+        <div className="space-y-4 mt-4 h-[calc(100vh-300px)] overflow-y-auto">
           {isLoading && (
-            <div className="p-8 rounded-lg w-full flex items-center justify-center bg-primary">
+            <div className="p-8 rounded-lg w-full flex items-center justify-center bg-gray-900">
               <Loader />
             </div>
           )}
