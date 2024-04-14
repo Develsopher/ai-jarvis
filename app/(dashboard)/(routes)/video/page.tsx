@@ -12,7 +12,7 @@ import { Heading } from "@/components/dashboard/heading";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Empty } from "@/components/dashboard/empty";
-import { Loader } from "@/components/loader";
+import { Loadingbar } from "@/components/loading-bar";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { useProModal } from "@/stores/pro-modal";
 import toast from "react-hot-toast";
@@ -94,7 +94,7 @@ const VideoPage = () => {
         <div className="space-y-4 mt-4 h-[calc(100vh-300px)] overflow-y-auto">
           {isLoading && (
             <div className="p-8 rounded-lg w-full flex items-center justify-center bg-gray-900">
-              <Loader />
+              <Loadingbar />
             </div>
           )}
           {!video && !isLoading && (
