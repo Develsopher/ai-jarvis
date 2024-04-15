@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 🤖 AI Jarvis
+- 링크 : [AI-Jarvis](https://ai-jarvis-sable.vercel.app/dashboard)
+- 프로젝트 설명: AI 도구를 제공해주는 SaaS 기반 구독 서비스
+  ![image](https://github.com/Develsopher/ai-jarvis/assets/78126381/bd5ac7f1-a8fa-40dd-a36a-0f90cf5b86c9)
+## Features
+- 제공되는 기능
+  - 챗봇
+    ![image](https://github.com/Develsopher/ai-jarvis/assets/78126381/cdd40c8a-377b-4059-b2fc-86b1ae19ec8b)
+    - Open AI 3.5 turbo api 사용중
+  - 코드 생성기
+    ![image](https://github.com/Develsopher/ai-jarvis/assets/78126381/d975b5ba-5200-4ccb-9c45-2de4b4a9ed25)
+    - Open AI 3.5 turbo api (code 생성 및 코드설명)
+  - 이미지 생성기
+    ![image](https://github.com/Develsopher/ai-jarvis/assets/78126381/90b40447-70f1-428e-8f5c-8e68847f61bb)
+    - Open AI DALL·E 2
+    - 이미지 갯수 및 크기설정 + 이미지 다운로드
+  - 영상 생성기
+    ![image](https://github.com/Develsopher/ai-jarvis/assets/78126381/090c88f5-a755-4da1-8acf-c1d0bd1bba9d)
+    - replicate api 사용중
+    - [cog-text2video github](https://github.com/anotherjesse/cog-text2video) (text -> video)
+  - 음악 생성기
+    ![image](https://github.com/Develsopher/ai-jarvis/assets/78126381/83f99462-0571-4b1b-874b-eb4234951ada)
+    - replicate api 사용중 
+    - [riffusion github](https://github.com/riffusion/riffusion) (text -> sound)
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Details
+### 로그인 및 회원관리
+- [Clerk](https://clerk.com)
+### 채팅 CS관리
+- [Crisp](https://crisp.chat/en)
+### 데이터 베이스
+- Prism ORM
+- [Aiven](https://crisp.chat/en/)
+### 결제 구독관리 (테스트 모드, 실제 결제안됨)
+- [Stripe](https://stripe.com/)
