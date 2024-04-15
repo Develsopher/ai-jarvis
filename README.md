@@ -29,7 +29,7 @@
 ### 채팅 CS관리
 - [Crisp](https://crisp.chat/en)
 ### 데이터 베이스
-- Prism ORM
+- Prism ORM (유저별 Free API count, 구독정보관리)
 - [Aiven](https://crisp.chat/en/)
 ### 결제 구독관리 (테스트 모드, 실제 결제안됨)
 - [Stripe](https://stripe.com/)
